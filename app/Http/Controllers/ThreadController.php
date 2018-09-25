@@ -15,6 +15,7 @@ class ThreadController extends Controller
     public function index()
     {
         //
+        return \App\Thread::with('reply')->get();
     }
 
     /**
