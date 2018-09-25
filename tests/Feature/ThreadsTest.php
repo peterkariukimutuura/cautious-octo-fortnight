@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 class ThreadsTest extends TestCase
 {
 
-    use DatabaseMigrations;
+    // use DatabaseMigrations;
     
 
     /** @test */
@@ -17,5 +17,7 @@ class ThreadsTest extends TestCase
         $response = $this->get('/threads');
 
         $response->assertStatus(200);
+
+        $response->assertSee($thread->title);
     }
 }

@@ -15,7 +15,10 @@ class ThreadsController extends Controller
     public function index()
     {
         //
-        return \App\Thread::with('reply')->get();
+
+        $threads =Thread::latest()->get();
+
+        return view('threads.index',compact('threads'));
     }
 
     /**
