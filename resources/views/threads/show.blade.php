@@ -9,6 +9,8 @@
 
                 <div class="card-body">
                     {{$thread->body}}
+                    <hr>
+                    <a  class="btn btn-outline-secondary btn-sm" href="{{ route('threads') }}"> Go Back</a>
                 </div>
             </div>
         </div>

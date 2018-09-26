@@ -13,11 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/threads','ThreadsController@index');
+Route::get('/threads','ThreadsController@index')->name('threads');
 Route::get('/threads/{thread}','ThreadsController@show');
