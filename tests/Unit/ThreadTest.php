@@ -23,7 +23,7 @@ class ThreadTest extends TestCase
 
     	$thread=factory('App\Thread')->create();
 
-    	$this->assertInstanceOf('App\User',$thread->owner);
+    	$this->assertInstanceOf('App\User',$thread->creator);
     }
 
 }
