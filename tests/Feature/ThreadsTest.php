@@ -18,6 +18,8 @@ class ThreadsTest extends TestCase
 
         $response->assertStatus(200);
 
-        $response->assertSee($thread->title);
+        $thread=$thread->title;
+
+        $response->assertSee($thread);
     }
 }
