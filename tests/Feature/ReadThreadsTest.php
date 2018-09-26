@@ -43,9 +43,12 @@ class ReadThreadsTest extends TestCase
 
         //given we have a thread
 
-        factory('App\Reply')->create(['thread_id'=>$this->thread->id]);
+        $reply=factory('App\Reply')->create(['thread_id'=>$this->thread->id]);
 
         //and that thread includes replies 
+
+        $this->get('/threads/'.$this->thread->id)
+              ->assertSee($reply->body);
 
         //when we visit a thread page
 
