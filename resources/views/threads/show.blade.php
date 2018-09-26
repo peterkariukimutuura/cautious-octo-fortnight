@@ -21,8 +21,9 @@
             @foreach($thread->replies as $reply)
                 <div class="card">
                     <div class="card-header text-info">
-                        {{$reply->owner->name}} said 
-                     <small>{{$reply->created_at->diffForHumans()}}</small>
+                        <a href="#">{{$reply->owner->name}}</a> &nbsp; &nbsp;
+                        said 
+                     <small>{{$reply->created_at->diffForHumans()}} ...</small>
                     </div>
                     <div class="card-body">
                         {{$reply->body}}
