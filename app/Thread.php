@@ -16,3 +16,4 @@ class Thread extends Model
     	return '/threads/'.$this->id;
     }
 }
+ 
